@@ -1,5 +1,17 @@
-//TWO POINTER PROBLEMS
-//container with most water
+//TWO POINTER PROBLEMS - 11 problems solved
+//- What it is
+// Use two variables (pointers) to scan an array or list at the same time.
+//- How it works
+// One pointer starts at the beginning, the other at the end (or both move forward together).
+//- Why it’s useful
+// Cuts down nested loops, making problems faster (usually O(n) instead of O(n²)).
+//- Where it’s used
+// Finding pairs with a target sum, reversing arrays, removing duplicates, sliding window problems.
+//- Types of movement
+// Opposite direction: start and end moving inward.
+//Same direction: both move forward for window-based problems.
+
+//container with most water - problem no : 11
 class Solution {
     public int maxArea(int[] height) {
         int maxarea =0;
@@ -19,7 +31,7 @@ class Solution {
     }
 }
 
-//3 sum
+//3 sum - problem no : 15
 import java.util.*;
 
 class Solution {
@@ -49,7 +61,7 @@ class Solution {
     }
 }
 
-//Remove Nth node from end of list
+//Remove Nth node from end of list - problem no : 19
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode res = new ListNode(0, head);
@@ -65,7 +77,7 @@ class Solution {
         return res.next;
     }  
 }
-//Find the index of first occurence in a string
+//Find the index of first occurence in a string - problem no : 28
 class Solution {
     public int strStr(String haystack, String needle) {
         int nlen = haystack.length();
@@ -79,7 +91,7 @@ class Solution {
         return -1;
     }
 }
-//Two sum II- Input Array is sorted
+//Two sum II- Input Array is sorted - problem no : 167
 class Solution {
     public int strStr(String haystack, String needle) {
         int nlen = haystack.length();
@@ -93,7 +105,7 @@ class Solution {
         return -1;
     }
 }
-//Reverse String
+//Reverse String - problem no : 344
 class Solution {
     public void reverseString(char[] s) {
        int l=0,r=s.length-1;
@@ -106,7 +118,7 @@ class Solution {
        }
     }
 }
-//Reverse vowels of a string
+//Reverse vowels of a string - problem no : 345
 class Solution {
     public String reverseVowels(String s) {
         char[] ch = s.toCharArray();
@@ -130,7 +142,7 @@ class Solution {
         return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' || ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U';
     }
 }
-//Assign cookies
+//Assign cookies - problem no : 455
 class Solution {
     public int findContentChildren(int[] g, int[] s) {
       Arrays.sort(g);
@@ -146,7 +158,7 @@ class Solution {
       return i;
     }
 }
-//Heaters
+//Heaters - problem no : 475
 class Solution {
     public int findRadius(int[] houses, int[] heaters) {
         int res=0;
@@ -163,7 +175,7 @@ class Solution {
      return res;
     }
 }
-//Middle of the LinkedList
+//Middle of the LinkedList - 876
 class Solution {
     public ListNode middleNode(ListNode head) {
         if(head.next == null || head == null) return head;
@@ -176,7 +188,7 @@ class Solution {
         return slow;
     }
 }
-//Boats to save people
+//Boats to save people - 881
 class Solution {
     public int numRescueBoats(int[] people, int limit) {
         Arrays.sort(people);
@@ -196,3 +208,4 @@ class Solution {
         return ans;
     }
 }
+
